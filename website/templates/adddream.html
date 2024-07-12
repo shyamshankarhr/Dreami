@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}New Dreams{% endblock %}
+
+{% block content %}
+
+<br><br>
+<h2 align="center" style="font-family: Caveat, cursive; color: #ffffff; font-size: 45px; text-shadow: rgb(0, 0, 0, 0.6) 2px 2px 2px;">Post Your Dream</h2>
+<br><br>
+<div style="width: 120%; margin-left: -10%; align-content: center">
+<form method="POST">
+<textarea name="dream" id="dream" class="form-control" placeholder="Add text here ..." rows="8"></textarea>
+<br><br>
+<div class="two-col">
+    <div class="col1">
+        <label for="user_bg" style="font-family: Ebrima; color: #ffffff;">Describe current life situation (optional):</label>
+        <textarea name="user_bg" id="user_bg" class="form-control" placeholder="Add text here ..." rows="4"></textarea>
+    </div>
+
+    <div class="col2">
+        <label for="wakeup_st" style="font-family: Ebrima; color: #ffffff; ">Describe thoughts after waking-up (optional):</label>
+        <textarea name="wakeup_st" id="wakeup_st" class="form-control" placeholder="Add text here ..." rows="4"></textarea>
+    </div>
+</div>
+<br>
+        <br>
+
+<div align="center" style="margin-bottom: 15px">
+    <button type="submit" class="button-85" role="button" name="submit_yes" id="submit_yes" value="yes" onclick="location.href = '/adddream';">Interpret</button>
+</div>
+
+<div align="center">
+    <input type="checkbox" name="submit_no" class="form-check-input" id="submit_no" style="zoom:150%"><span style="font-family: Ebrima; color: #FFFFFF; zoom:120%"> Not a public post </span></input>
+</div>
+
+
+</form>
+</div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+{% endblock %}

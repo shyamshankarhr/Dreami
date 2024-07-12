@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+<br><br>
+<form class="form-horizontal" align="center" method="POST">
+<fieldset class="profile-form-design">
+
+<!-- Form Name -->
+
+<h2 align="center" style="font-family: Caveat, cursive; color: #ffffff; font-size: 45px; text-shadow: rgb(0, 0, 0, 0.6) 2px 2px 2px;">{{ user.first_name }}'s Profile</h2>
+<br>
+
+<!-- Text input-->
+<div class="form-group; row align-center">
+  <label class="col-md-4 control-label" align="right">Age</label>
+  <div class="col-md-4">
+  {{ profile.age }}
+  </div>
+</div>
+<br>
+
+<!-- Select Basic -->
+<div class="form-group; row align-center">
+  <label class="col-md-4 control-label" align="right">Gender</label>
+  <div class="col-md-4">
+    {{ profile.gender }}
+  </div>
+</div>
+<br>
+
+<!-- Select Basic -->
+<div class="form-group; row align-center">
+  <label class="col-md-4 control-label" align="right">Relationship Status</label>
+  <div class="col-md-4">
+    <p>{{ profile.relationship }}</p>
+  </div>
+</div>
+<br>
+
+<!-- Select Basic -->
+<div class="form-group; row align-center">
+  <label class="col-md-4 control-label" align="right">Country</label>
+  <div class="col-md-4">
+    <p>{{ profile.country }}</p>
+  </div>
+</div>
+<br>
+
+<!-- Text input-->
+<div class="form-group; row align-center">
+  <label class="col-md-4 control-label" align="right">Occupation</label>
+  <div class="col-md-4">
+  <p>{{ profile.occupation }}</p>
+
+  </div>
+</div>
+<br>
+
+<!-- Textarea -->
+<div class="form-group; row align-center">
+  <label class="col-md-4 control-label" align="right">Current Struggles</label>
+  <div class="col-md-4">
+    <p>{{ profile.struggles }}</p>
+  </div>
+</div>
+<br>
+
+<!-- Button -->
+<div class="form-group; row align-center">
+  <label class="col-md-4 control-label" for="edit"></label>
+  <div class="col-md-4">
+    <button id="edit" name="edit" class="btn btn-primary" onclick="location.href='/profile';" style="background-color:#9c5aed;" >Edit</button>
+  </div>
+</div>
+</fieldset>
+</form>
+<br><br><br> <br> <br> <br> <br> <br> <br> <br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Home | Dreami{% endblock %}
+
+{% block content %}
+<br><br>
+<div style="width: 120%; margin-left: -10%; align-content: center">
+<h2 align="center" style="font-family: Caveat, cursive; color:#ffffff; font-size: 45px; text-shadow: rgb(0, 0, 0, 0.6) 2px 2px 2px;">Welcome {{ user.first_name }}</h2>
+<br>
+    <ul class="home-title">
+  <li class="home-title-head"><h2 align="center" style="font-family: Ebrima; color:#ffffff; text-shadow: rgb(0, 0, 0, 0.6) 2px 2px 2px;">Dream Feed</h2></li>
+  <li class="home-title-button"><button class="button-85" role="button" onclick="location.href = '/adddream';">+ Add Dream</button></li>
+</ul>
+<br>
+
+<ul class="list-group list-group-flush" id="dreams">
+
+    {% for dream in dreams.query.filter_by(public='yes').order_by(dreams.id.desc()).all() %}
+        {% set dreamer = users.query.filter_by(id=dream.user_id).first() %}
+        {% set all_comments = comments.query.all() %}
+        {% set all_votes = upvote.query.all() %}
+        {% set all_users = user.query.all() %}
+
+
+            <li class="list-group-item background-transp">
+                {% with dreamer_name = dreamer.first_name, dreamer_job = dreamer.job_title, dream_date = dream.date,
+                 dream_content = dream.data, user_bg = dream.dreamer_background, wakeup_st = dream.wakeup_state,
+                  dreami_inter = dream.dreami_inter, dreamid = dream.id, all_comments=all_comments, dreamer_id = dream.user_id,
+                  all_votes = all_votes, all_users=all_users, helpfulness = dream.rating1, reflection = dream.rating2%}
+                {% include 'post.html' %}
+                {% endwith %}
+            </li>
+    {% endfor %}
+
+
+</ul>
+</div>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+{% endblock %}

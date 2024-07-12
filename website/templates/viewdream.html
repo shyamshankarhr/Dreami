@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block title %}New Dreams{% endblock %}
+
+{% block content %}
+<br>
+{% if dream %}
+    <div class="dreami-inter" style="margin-top: 15px">
+        <h2>Dreami's Interpretation</h2>
+        <p>{{ dream.dreami_inter }}</p>
+    </div>
+    {% endif %}
+<form class="form-horizontal" align="center" method="POST">
+<div class="dreami-rating">
+<br>
+<div class="txt-center; ratings" align="center" style="zoom:90%">
+    <label style="font-family: Ebrima; color: #ffffff; font-size: larger"><h5>How helpful was this?</h5></label>
+        <div class="rating" style="margin-top: -20px">
+            <input id="star5_1" name="star5_1" type="radio" value="5" class="radio-btn hide" />
+            <label for="star5_1" style="font-size: xx-large">☆</label>
+            <input id="star4_1" name="star4_1" type="radio" value="4" class="radio-btn hide" />
+            <label for="star4_1" style="font-size: xx-large">☆</label>
+            <input id="star3_1" name="star3_1" type="radio" value="3" class="radio-btn hide" />
+            <label for="star3_1" style="font-size: xx-large">☆</label>
+            <input id="star2_1" name="star2_1" type="radio" value="2" class="radio-btn hide" />
+            <label for="star2_1" style="font-size: xx-large">☆</label>
+            <input id="star1_1" name="star1_1" type="radio" value="1" class="radio-btn hide" />
+            <label for="star1_1" style="font-size: xx-large">☆</label>
+            <div class="clear"></div>
+        </div>
+</div>
+
+<div class="txt-center; ratings" align="center" style="zoom:90%">
+    <label style="font-family: Ebrima; color: #ffffff; font-size: larger"><h5>I learned something new about myself:</h5></label>
+        <div class="rating" style="margin-top: -20px">
+
+            <input id="star5_2" name="star5_2" type="radio" value="5" class="radio-btn hide" />
+            <label for="star5_2" style="font-size: xx-large">☆</label>
+            <input id="star4_2" name="star4_2" type="radio" value="4" class="radio-btn hide" />
+            <label for="star4_2" style="font-size: xx-large">☆</label>
+            <input id="star3_2" name="star3_2" type="radio" value="3" class="radio-btn hide" />
+            <label for="star3_2" style="font-size: xx-large">☆</label>
+            <input id="star2_2" name="star2_2" type="radio" value="2" class="radio-btn hide" />
+            <label for="star2_2" style="font-size: xx-large">☆</label>
+            <input id="star1_2" name="star1_2" type="radio" value="1" class="radio-btn hide" />
+            <label for="star1_2" style="font-size: xx-large">☆</label>
+            <div class="clear"></div>
+        </div>
+
+</div>
+    <br>
+</div>
+    <br>
+
+<div class="form-group; row align-center">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4" align="center">
+    <button id="submit" name="submit" class="btn btn-primary" style="background-color:#9c5aed;">Submit</button>
+  </div>
+</div>
+</div>
+</form>
+<br>
+
+<h2 align="center" style="font-family: Caveat, cursive; color: #ffffff; font-size: 45px; text-shadow: rgb(0, 0, 0, 0.6) 2px 2px 2px;">Original Dream</h2>
+<div style="width: 72%; margin-left: 14%; padding: 20px; color: #000; background: rgba(0, 0, 0, 0.4); color: #fff">{{ dream.data }}</div>
+<br><br>
+<div class="two-col-view">
+    <div class="col1">
+        <label style="font-family: Ebrima; color: #ffffff; font-size: 18px; text-shadow: rgb(0, 0, 0, 0.3) 2px 2px 2px;">Current life situation:</label>
+        <div style="padding: 20px; color: #000; background: rgba(0, 0, 0, 0.4); color: #fff">{{ dream.dreamer_background }}</div>
+    </div>
+
+    <div class="col2">
+        <label style="font-family: Ebrima; color: #ffffff; font-size: 18px; text-shadow: rgb(0, 0, 0, 0.3) 2px 2px 2px;">Thoughts after waking up:</label>
+        <div style="padding: 20px; color: #000; background: rgba(0, 0, 0, 0.4); color: #fff">{{ dream.wakeup_state }}</div>
+    </div>
+</div>
+<br>
+        <br>
+
+    <br><br>
+
+</form>
+<br><br>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+{% endblock %}

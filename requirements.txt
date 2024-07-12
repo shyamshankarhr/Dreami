@@ -1,0 +1,6 @@
+openai
+flask
+flask-login
+flask-sqlalchemy
+pandas
+gunicorn

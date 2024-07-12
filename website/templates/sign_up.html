@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Signup</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="./../static/css/login/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./../static/fonts/login/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="./../static/fonts/login/material-design-iconic-font.min.css">
+<link rel="stylesheet" type="text/css" href="./../static/css/login/animate.css">
+<link rel="stylesheet" type="text/css" href="./../static/css/login/hamburgers.min.css">
+<link rel="stylesheet" type="text/css" href="./../static/css/login/animsition.min.css">
+<link rel="stylesheet" type="text/css" href="./../static/css/login/select2.min.css">
+<link rel="stylesheet" type="text/css" href="./../static/css/login/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="./../static/css/login/util.css">
+<link rel="stylesheet" type="text/css" href="./../static/css/login/main.css">
+
+<meta name="robots" content="noindex, follow">
+
+<script type="text/javascript" async="" src="./../static/javascript/login/analytics.js.download" nonce="e8f69e3b-091e-4689-ab96-afb6250223fe"></script><script defer="" referrerpolicy="origin" src="./../static/javascript/login/s.js.download"></script><script nonce="e8f69e3b-091e-4689-ab96-afb6250223fe">(function(w,d){!function(a,e,t,r){a.zarazData=a.zarazData||{},a.zarazData.executed=[],a.zaraz={deferred:[]},a.zaraz.q=[],a.zaraz._f=function(e){return function(){var t=Array.prototype.slice.call(arguments);a.zaraz.q.push({m:e,a:t})}};for(const e of["track","set","ecommerce","debug"])a.zaraz[e]=a.zaraz._f(e);a.addEventListener("DOMContentLoaded",(()=>{var t=e.getElementsByTagName(r)[0],z=e.createElement(r),n=e.getElementsByTagName("title")[0];for(n&&(a.zarazData.t=e.getElementsByTagName("title")[0].text),a.zarazData.x=Math.random(),a.zarazData.w=a.screen.width,a.zarazData.h=a.screen.height,a.zarazData.j=a.innerHeight,a.zarazData.e=a.innerWidth,a.zarazData.l=a.location.href,a.zarazData.r=e.referrer,a.zarazData.k=a.screen.colorDepth,a.zarazData.n=e.characterSet,a.zarazData.o=(new Date).getTimezoneOffset(),a.zarazData.q=[];a.zaraz.q.length;){const e=a.zaraz.q.shift();a.zarazData.q.push(e)}z.defer=!0;for(const e of[localStorage,sessionStorage])Object.keys(e).filter((a=>a.startsWith("_zaraz_"))).forEach((t=>{try{a.zarazData["z_"+t.slice(7)]=JSON.parse(e.getItem(t))}catch{a.zarazData["z_"+t.slice(7)]=e.getItem(t)}}));z.referrerPolicy="origin",z.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(a.zarazData))),t.parentNode.insertBefore(z,t)}))}(w,d,0,"script");})(window,document);</script></head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+	<div class="limiter">
+		<div style="zoom: 90% ">
+		<div class="container-login100">
+			<div class="wrap-login70">
+				<form method="POST" class="login70-form validate-form">
+					<span class="login70-form-title p-b-10">
+						Sign Up
+					</span>
+					<div class="wrap-input100 validate-input m-t-10 m-b-20" data-validate="Enter Nickname">
+						<input class="input100" type="text" name="firstName">
+						<span class="focus-input100" data-placeholder="Nickname"></span>
+					</div>
+                    <div class="wrap-input100 validate-input m-b-20" data-validate="Enter Email">
+						<input class="input100" type="text" name="email">
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
+                    <div class="wrap-input100 m-b-20">
+						<input class="input100" type="text" name="job_title">
+						<span class="focus-input100" data-placeholder="Job Title"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-20" data-validate="Enter password">
+						<input class="input100" type="password" name="password1">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+                    <div class="wrap-input100 validate-input m-b-30" data-validate="Enter password again">
+						<input class="input100" type="password" name="password2">
+						<span class="focus-input100" data-placeholder="Confirm Password"></span>
+					</div>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Submit
+						</button>
+					</div>
+					<br>
+					<ul class="login-more p-t-10">
+						<li>
+							<span class="txt1">
+								Already have an account?
+							</span>
+							<a href="/login" class="txt2">
+								Log in
+							</a>
+						</li>
+					</ul>
+				</form>
+			</div>
+            <div class="verticalLine">
+                <div class="wrap-login70 p-t-120 p-b-120">
+                    <span class="login100-form-avatar">
+                        <img src="./../static/images/login/dreami.jpeg" alt="AVATAR">
+                    </span>
+                </div>
+            </div>
+		</div>
+		<div align="center" class="p-b-10" style="zoom:90%"><h6> *By signing up, you agree to our<b> <a href="/privacy" target="_blank" style="color: #28a745"><u>Terms of Use and Privacy Policy</u></a></b></h6></div>
+		</div>
+	</div>
+
+	<div id="dropDownSelect1"></div>
+
+	<script src="./../static/javascript/login/jquery-3.2.1.min.js.download"></script>
+	<script src="./../static/javascript/login/animsition.min.js.download"></script>
+	<script src="./../static/javascript/login/popper.js.download"></script>
+	<script src="./../static/javascript/login/bootstrap.min.js.download"></script>
+	<script src="./../static/javascript/login/select2.min.js.download"></script>
+	<script src="./../static/javascript/login/moment.min.js.download"></script>
+	<script src="./../static/javascript/login/daterangepicker.js.download"></script>
+	<script src="./../static/javascript/login/countdowntime.js.download"></script>
+	<script src="./../static/javascript/login/main.js.download"></script>
+	<script async="" src="./../static/javascript/login/js"></script>
+	<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-23581568-13');
+		</script>
+	<script defer="" src="./../static/javascript/login/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon="{&quot;rayId&quot;:&quot;71316b34ea427180&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2021.12.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+
+</body></html>
